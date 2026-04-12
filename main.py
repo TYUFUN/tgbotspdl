@@ -39,7 +39,6 @@ async def link(message: Message):
         song_name = song_name1.split(" - song")[0] 
         results = Search(song_name)
         for song in results.videos:
-            url = song.watch_url
             name = song.title
             break
     except Exception:
@@ -51,15 +50,15 @@ async def link(message: Message):
         for audio_file in os.listdir("."):
            if audio_file.endswith(".m4a"):
                count = count + 1
-               temporary = f"song" + str(count) + ".m4a"
+               temporary ="song" + str(count) + ".m4a"
                rename(audio_file, temporary)
-               sent = FSInputFile(temporary, name + ".m4a")
+               sent = FSInputFile(path=temporary, filename=name + ".m4a")
                await message.answer_audio(sent)
                await bot.delete_message(chat_id=message.chat.id, message_id=oss.message_id)
                remove(temporary)
+               break
     except Exception:
-        await bot.delete_message(chat_id=message.chat.id, message_id=oss.message_id)
-        
+        await bot.delete_message(chat_id=message.chat.id, message_id=oss.message_id) 
         for f in os.listdir("."):
            if f.endswith(".m4a"):
                 remove(f)
@@ -73,5 +72,5 @@ async def main():
 if __name__ == '__main__':
     try:
         asyncio.run(main())
-    except Exception:
-        pass
+    except Exception as s:
+        print(s)
