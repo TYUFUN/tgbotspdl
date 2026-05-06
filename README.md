@@ -2,13 +2,14 @@
 ![python](https://img.shields.io/badge/python-3.13.5-blue)
 [![MIT License](https://img.shields.io/badge/License-MIT-red.svg)](https://choosealicense.com/licenses/mit/)
 ![bot](https://img.shields.io/badge/BOT-gray?logo=telegram&logoColor=26A5E4)
+
 A Telegram bot that allows you to download Spotify songs by simply sending a link.
 
 
 ## ⚙️ HOW IT WORKS?
 The bot extracts the song title and artist from the Spotify link, searches for the audio on YouTube, and delivers the downloaded file directly to you.
 
-### 🌟  DEPLOYMENT
+## 🌟  DEPLOYMENT
 1. run
 ```
 git clone https://github.com/TYUFUN/tgbotspdl
