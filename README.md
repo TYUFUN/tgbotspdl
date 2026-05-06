@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ```
 **Linux:**
 ```
-python -m venv venv
+python3 -m venv venv
 venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -49,7 +49,7 @@ or
 ```
 python3 main.py
 ```
-## ⚠️ mportant notes:
+## ⚠️ Important notes:
 
 1. *If you deploy bot on VPS firstly upload folder to the server then or follow instructions that hosting says or follow our instructions (depends of hosting automatization level)*
 
