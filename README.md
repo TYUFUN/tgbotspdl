@@ -1,5 +1,5 @@
 
-## 🎵tgbotspdl - telegram bot spotify downloader
+# 🎵tgbotspdl - telegram bot spotify downloader
 ![python](https://img.shields.io/badge/python-3.13.5-blue)
 [![MIT License](https://img.shields.io/badge/License-MIT-red.svg)](https://choosealicense.com/licenses/mit/)
 ![bot](https://img.shields.io/badge/bot-telegram-green)
