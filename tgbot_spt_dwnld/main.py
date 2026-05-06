@@ -33,9 +33,9 @@ async def link(message: Message):
         global count
         oss = await message.answer("working...🛠️")
         h = {'User-Agent': 'facebookexternalhit/1.1'}
-        request = requests.get(message.text, headers=h)    
+        request = requests.get(message.text, headers=h)     # type: ignore
         soup = BeautifulSoup(request.text, 'html.parser')
-        song_name1 = soup.title.string.replace(" | Spotify", "").replace(" - song by", " -")
+        song_name1 = soup.title.string.replace(" | Spotify", "").replace(" - song by", " -") # type: ignore
         song_name = song_name1.split(" - song")[0] 
         results = Search(song_name)
         for song in results.videos:
@@ -53,7 +53,7 @@ async def link(message: Message):
                count = count + 1
                temporary = f"song" + str(count) + ".m4a"
                rename(audio_file, temporary)
-               sent = FSInputFile(temporary, name + ".m4a")
+               sent = FSInputFile(temporary, name + ".m4a") # type: ignore
                await message.answer_audio(sent)
                await bot.delete_message(chat_id=message.chat.id, message_id=oss.message_id)
                remove(temporary)
